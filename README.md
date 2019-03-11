@@ -7,5 +7,5 @@ https://github.com/Bony5690/My-Book-Shelf.git
 
 Once the project is on your machine cd into the directory of your project and run yarn install to install the required libraries for the applicaion.
 
-Run yarn start to run your project on the localhost of your computer.
+Run yarn start to run your project on the localhost of your  computer.
 
