@@ -13,7 +13,9 @@ class WantToRead extends React.Component {
             {/* Use only the book objects with the shelf property 'wantToRead' */}
             {this.props.booksWithCategory && this.props.booksWithCategory.filter( book_object => book_object.shelf === "wantToRead").map((book_object) => (
 
-            <List book={book_object} changeCategory={this.props.changeCategory} key={book_object.id} />
+            <List 
+ 
+            book={book_object} changeCategory={this.props.changeCategory} key={book_object.id} />
 
             ))}
 

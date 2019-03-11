@@ -13,7 +13,9 @@ class AlreadyRead extends React.Component {
           <ol className="books-grid">
             {this.props.booksWithCategory && this.props.booksWithCategory.filter(book_object => book_object.shelf === "read").map((book_object) => (
 
-              <List book={book_object} changeCategory={this.props.changeCategory} key={book_object.id} />
+              <List 
+    
+              book={book_object} changeCategory={this.props.changeCategory} key={book_object.id} />
 
 
             ))}

@@ -22,7 +22,9 @@ class SearchPage extends React.Component {
             <ol className="books-grid">
               {this.props.searchResults && this.props.searchResults.map((match) => (
 
-                <List book={match} changeCategory={this.props.changeCategory} key={match.id} />
+                <List 
+                defaultValue='none'
+                book={match} changeCategory={this.props.changeCategory} key={match.id} />
 
               ))}
             </ol>

@@ -7,19 +7,16 @@ const List = (props) => (
       <div className="book-top">
 
         {/* if the book object has an image or not */}
-        {props.book.imageLinks ?
-          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'url(' + props.book.imageLinks.smallThumbnail + ')' }}></div>
-          :
-          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'none' }}></div>
-        }
+        <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: props.book.imageLinks ? 'url(' + props.book.imageLinks.smallThumbnail + ')' : 'none' }}></div>
 
         <div className="book-shelf-changer">
-          <select onChange={(e) => props.changeCategory(props.book, e)} value={props.book.shelf} defaultValue={"none"}>
-            <option value="move" disabled>Move to...</option>
+          <select onChange={(e) => props.changeCategory(props.book, e)} value={props.book.shelf} >
+            {/* <option value="move" disabled>Move to...</option> */}
+            <option value="none" >None</option>
             <option value="currentlyReading" >Currently Reading</option>
             <option value="wantToRead" >Want to Read</option>
             <option value="read" >Read</option>
-            <option value="none" >None</option>
+
           </select>
         </div>
 
